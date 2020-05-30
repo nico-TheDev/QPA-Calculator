@@ -33,7 +33,7 @@ class GradeForSubject {
             this.qualityPoint = 4;
         }
         else if(numericalGrade >= 85 && numericalGrade <= 91){
-            this.letterGrade = 'B';
+            this.letterGrade = 'B+';
             this.qualityPoint = 3.5;
         }
         else if(numericalGrade >= 78 && numericalGrade <= 84){
@@ -144,5 +144,5 @@ function computeFinal(){
     const semestralGrade = totalWQP / totalUnits;
 
     // console.log(semestralGrade);
-    alert(`Your Semestral Grade: ${semestralGrade}`);
+    alert(`Your Semestral Grade: ${semestralGrade}`);   
 }
