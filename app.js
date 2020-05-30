@@ -143,6 +143,6 @@ function computeFinal(){
 
     const semestralGrade = totalWQP / totalUnits;
 
-    console.log(semestralGrade);
-    // alert(`Your Semestral Grade: ${semestralGrade}`);
+    // console.log(semestralGrade);
+    alert(`Your Semestral Grade: ${semestralGrade}`);
 }
