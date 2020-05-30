@@ -33,6 +33,7 @@ button {
 
 .container {
   width: 80%;
+  min-width: 900px;
   margin: 0 auto;
   padding: 2rem 0;
 }
@@ -63,11 +64,11 @@ button {
   min-height: 90vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  grid-gap: 2rem;
+  row-gap: 2rem;
 }
 
 .board, .howto {
@@ -82,17 +83,14 @@ input, select {
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid gray;
-}
-
-#units {
-  width: 5rem;
+  width: 100%;
 }
 
 .board {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -119,15 +117,46 @@ input, select {
 .board__field {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: max-content max-content;
-      grid-template-columns: -webkit-max-content -webkit-max-content;
-      grid-template-columns: max-content max-content;
+  -ms-grid-columns: max-content 1fr;
+      grid-template-columns: -webkit-max-content 1fr;
+      grid-template-columns: max-content 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
   margin-right: 10px;
   margin-bottom: 1rem;
+}
+
+.howto-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  z-index: 99;
+}
+
+.howto {
+  width: 50%;
+  position: relative;
+  z-index: 99;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .howto .title {
@@ -151,6 +180,7 @@ input, select {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  width: 100%;
 }
 
 .percentage label {
@@ -183,7 +213,7 @@ input, select {
   background-color: white;
   grid-column: span 2;
   color: black;
-  height: 40vh;
+  height: 50vh;
   overflow-y: scroll;
 }
 
@@ -225,6 +255,14 @@ input, select {
   grid-column: span 3;
 }
 
+.note a {
+  color: #27ae60;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}
+
 .btn {
   background-color: #27ae60;
   color: white;
@@ -241,5 +279,81 @@ input, select {
 
 .add {
   margin-bottom: 1rem;
+}
+
+.close {
+  font-size: 5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.close:hover {
+  color: white;
+}
+
+.semgrade {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 174, 96, 0.6);
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  z-index: 100;
+}
+
+.final-grade {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.final-grade__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.final-grade__hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.final-grade__letter {
+  font-size: 6rem;
+  text-shadow: 10px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.final-grade__number {
+  font-size: 3rem;
+  color: #27ae60;
+}
+
+.final-grade__img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.final-grade__text {
+  text-align: center;
+}
+
+.openModal {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 /*# sourceMappingURL=style.css.map */
