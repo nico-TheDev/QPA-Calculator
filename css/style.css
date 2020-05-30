@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: calc(10px + 1vh);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.app {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url(/bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url(/bg.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  min-height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.board, .howto {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+input, select {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+#units {
+  width: 5rem;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.board__title {
+  text-align: center;
+  margin-bottom: 1rem;
+  grid-column: span 2;
+}
+
+.board__row {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.board__field {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content max-content;
+      grid-template-columns: -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+  margin-bottom: 1rem;
+}
+
+.howto .title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.howto .desc {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.howto img {
+  display: block;
+  margin-left: auto;
+}
+
+.percentage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.percentage label {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.percentage input {
+  display: block;
+  width: 100%;
+}
+
+.percentage [type='number'] {
+  width: 100%;
+  display: block;
+}
+
+.percents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: span 2;
+}
+
+.howto {
+  background-color: white;
+}
+
+.table {
+  background-color: white;
+  grid-column: span 2;
+  color: black;
+  height: 40vh;
+  overflow-y: scroll;
+}
+
+.table .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+}
+
+.table .row:nth-child(odd) {
+  background-color: #27ae60;
+  color: white;
+}
+
+.table .cell {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem;
+}
+
+.table .cell {
+  border: 1px solid black;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+.btn {
+  background-color: #27ae60;
+  color: white;
+  font-size: 1.3rem;
+  display: block;
+  padding: 1rem;
+  border-radius: 10px;
+  grid-column: span 2;
+}
+
+.btn:hover {
+  background-color: #60db94;
+}
+
+.add {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
