@@ -331,7 +331,7 @@ input, select {
 }
 
 .final-grade__letter {
-  font-size: 6rem;
+  font-size: 2rem;
   text-shadow: 10px 5px 0 rgba(0, 0, 0, 0.2);
 }
 

@@ -17,7 +17,7 @@ const subjectName = document.getElementById("name"),
     finalLetter = document.querySelector(".final-grade__letter");
 // Data structure
 
-const grades = [];
+const grades = ['1'];
 
 class GradeForSubject {
     constructor(name, units, smScore, smPercent, swScore, swPercent) {
@@ -171,30 +171,16 @@ function computeFinal() {
 
         const semestralGrade = totalWQP / totalUnits;
 
+        if(semestralGrade >= 3.51 && semestralGrade < 4){
+            finalLetter.textContent = 'First Honor';
+        }else if(semestralGrade >= 3.35 && semestralGrade <= 3.5) {
+            finalLetter.textContent = 'Second Honor';
+        }
+        else{
+            finalLetter.textContent = 'No Honor';
+        }
         finalGrade.textContent = semestralGrade.toFixed(2);
         finalModal.classList.add("openModal");
     }
 }
 
-// let numericalGrade = Math.ceil(semestralGrade);
-
-// if (numericalGrade >= 92 && numericalGrade <= 100) {
-//     letterGrade = "A";
-// } else if (numericalGrade >= 85 && numericalGrade <= 91) {
-//     letterGrade = "B+";
-// } else if (numericalGrade >= 78 && numericalGrade <= 84) {
-//     letterGrade = "B";
-// } else if (numericalGrade >= 71 && numericalGrade <= 77) {
-//     letterGrade = "C+";
-// } else if (numericalGrade >= 64 && numericalGrade <= 70) {
-//     letterGrade = "C";
-// } else if (numericalGrade >= 57 && numericalGrade <= 63) {
-//     letterGrade = "D+";
-// } else if (numericalGrade >= 50 && numericalGrade <= 56) {
-//     letterGrade = "D";
-// } else if (numericalGrade < 50) {
-//     letterGrade = "F";
-// }
-
-// console.log(semestralGrade);
-// alert(`Your Semestral Grade: ${semestralGrade}`);
